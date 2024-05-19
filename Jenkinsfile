@@ -6,12 +6,12 @@ node{
       stage('Build'){
          // Get maven home path and build
          //def mvnHome =  tool name: 'Maven 3.5.4', type: 'maven'   
-         sh "/opt/maven/bin/mvn package -Dmaven.test.skip=true"
+         sh "/usr/bin/mvn package -Dmaven.test.skip=true"
       }       
      
      stage ('Test'){
          //def mvnHome =  tool name: 'Maven 3.5.4', type: 'maven'    
-         sh "/opt/maven/bin/mvn verify; sleep 3"
+         sh "/usr/bin/mvn verify; sleep 3"
       }
       
      stage('Build Docker Image'){         
