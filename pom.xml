@@ -28,7 +28,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.9.6</version>
+        <version>2.3</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -55,6 +55,11 @@
             </configuration>
             <version>3.0.0-M1</version>
       </plugin>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.9.6</version>
+     </plugin>
      <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
