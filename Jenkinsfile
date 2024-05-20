@@ -19,8 +19,8 @@
       }  
    
       stage('Publish Docker Image'){
-         withCredentials([(credentialsId: 'dockerpwd', variable: 'dockerPWD')]) {
-              sh '''docker login -u mohdmuneer -p ${Muneer@7860}'''
+         withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerPWD')]) {
+              sh '''docker login -u mohdmuneer -p Muneer@7860'''
 
          }
         sh "docker push ${dockerImageName}"
